@@ -1,0 +1,28 @@
+- "left reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660030_1.fastq"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660030_2.fastq"
+  "type": "paired-end"
+- "left reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660033_1.fastq"
+  "number": !!int "2"
+  "orientation": "fr"
+  "right reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660033_2.fastq"
+  "type": "paired-end"
+- "left reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660044_1.fastq"
+  "number": !!int "3"
+  "orientation": "fr"
+  "right reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660044_2.fastq"
+  "type": "paired-end"
+- "left reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660045_1.fastq"
+  "number": !!int "4"
+  "orientation": "fr"
+  "right reads":
+  - "/home/araeedy/pipeline/myrepo/SRR5660045_2.fastq"
+  "type": "paired-end"

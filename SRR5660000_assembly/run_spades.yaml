@@ -1,0 +1,97 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K77
+  args:
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K77/configs/config.info
+  config_dir: K77
+  del_after: []
+  output_files: []
+  path: /usr/local/bin/spades-core
+  short_name: k77
+- STAGE: K99
+  args:
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K99/configs/config.info
+  config_dir: K99
+  del_after: []
+  output_files: []
+  path: /usr/local/bin/spades-core
+  short_name: k99
+- STAGE: K127
+  args:
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/configs/config.info
+  config_dir: K127
+  del_after: []
+  output_files: []
+  path: /usr/local/bin/spades-core
+  short_name: k127
+- STAGE: Copy files
+  args:
+  - /usr/local/share/spades/spades_pipeline/scripts/copy_files.py
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/before_rr.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/before_rr.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/assembly_graph_after_simplification.gfa
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/assembly_graph_after_simplification.gfa
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/final_contigs.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/contigs.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/first_pe_contigs.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/first_pe_contigs.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/strain_graph.gfa
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/strain_graph.gfa
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/scaffolds.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/scaffolds.fasta
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/scaffolds.paths
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/scaffolds.paths
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/assembly_graph_with_scaffolds.gfa
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/assembly_graph_with_scaffolds.gfa
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/assembly_graph.fastg
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/assembly_graph.fastg
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/K127/final_contigs.paths
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_0zgkkaf8
+  output_files: []
+  path: /usr/bin/python
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /usr/local/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/scaffolds.fasta
+  - --misc_dir
+  - /home/araeedy/pipeline/myrepo/SRR5660000_assembly/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /usr/bin/python
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate

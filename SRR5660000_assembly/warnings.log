@@ -1,0 +1,6 @@
+
+=== Error correction and assembling warnings:
+ * 0:19:03.268  1835M / 3262M WARN    General                 (kmer_coverage_model.cpp   : 218)   Too many erroneous kmers, the estimates might be unreliable
+ * 0:19:35.490  1837M / 3262M WARN    General                 (kmer_coverage_model.cpp   : 327)   Valley value was estimated improperly, reset to 2
+ * 0:19:35.493  1837M / 3262M WARN    General                 (kmer_coverage_model.cpp   : 366)   Failed to determine erroneous kmer threshold. Threshold set to: 2
+======= Warnings saved to /home/araeedy/pipeline/myrepo/SRR5660000_assembly/warnings.log
