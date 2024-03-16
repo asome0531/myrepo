@@ -5,8 +5,11 @@ This project focused on human herpesvirus 5 which is also known as cytomegalovir
 First we retrieved 2 paitents transcriptomes from SRA and coverted to paird-end fastq files using wget by constructing the URL path based on the SRR numbers for each of these smaples. 
 
 Donor 1 (2dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896360
+
 Donor 1 (6dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896363
+
 Donor 3 (2dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896374
+
 Donor 3 (6dpi): https://www.ncbi.nlm.nih.gov/sra/SRX2896375
 
 
